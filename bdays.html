@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bdays</title>
+  <link rel="stylesheet" href="common.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body onload="fillBdays();">
+  <div class="navbar flex items-center justify-evenly px-2.5 py-3.5"
+    style="background: var(--main-black); color: var(--main-white);">
+    <div class="item uppercase"><a href="index.html">Details</a></div>
+    <div class="item border-b-2 uppercase" style="border-color: var(--main-white);"><a href="#">Bdays</a></div>
+  </div>
+
+  <div class="container w-4/5 sm:w-2/5 p-2.5 my-5 mx-1.5 mx-auto bdays-container">
+    <h2 class="uppercase tracking-widest text-center font-bold text-2xl">
+      Birthdays
+    </h2>
+    <br /><br />
+
+    <hr />
+    <div class="flex-area flex my-2.5 text-base">
+      <div class="left w-1/3 text-center mr-1.5 font-bold uppercase tracking-widest text-xl">
+        Month
+      </div>
+      <div class="middle w-1/3 mr-1.5 ml-1.5 text-center font-bold uppercase tracking-wide text-xl">
+        Day
+      </div>
+      <div class="right w-1/3 ml-1.5 text-center font-bold uppercase tracking-wide text-xl">
+        Name
+      </div>
+    </div>
+    <hr />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

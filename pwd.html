@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="common.css" />
+</head>
+
+<body>
+  <div class="pwd-page fixed w-full h-full grid place-items-center">
+    <div class="pwd-area w-4/5 sm:w-3/5">
+      <form action="">
+        <fieldset class="w-full p-4 border-2 border-solid border-black">
+          <legend class="px-2.5 py-1.5 tracking-widest uppercase">
+            Enter Password
+          </legend>
+          <input type="password" class="w-full p-1 border-2 border-solid border-black" /><br /><br />
+          <input type="button" class="w-20 py-1 tracking-widest" value="SUBMIT" onclick="checkPwd();" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const a = (theNo) => {
+      return theNo * theNo;
+    };
+
+    const b = (theNo) => {
+      let n = 0;
+      while (theNo > 0) {
+        d = theNo % 10;
+        n = n * 10 + d;
+        theNo = parseInt(theNo / 10);
+      }
+
+      return n;
+    };
+
+    const checkPwd = () => {
+      const l = ["hello", "72525", "namaste", "030916"];
+      let enteredPwd = document.getElementsByTagName("input")[0].value;
+
+      let aNo = parseInt(enteredPwd.substr(0, 2));
+      aNo = b(a(aNo));
+
+      let bNo = parseInt(enteredPwd.substr(-2, 2));
+      bNo = a(b(bNo));
+
+      let theRest = enteredPwd.substr(2, enteredPwd.length - 4);
+
+      if (aNo == bNo && l.includes(theRest)) {
+        sessionStorage.setItem("pwdCorrect", "yes");
+        sessionStorage.setItem("pwdChecked", "yes");
+      } else {
+        sessionStorage.setItem("pwdCorrect", "no");
+        sessionStorage.setItem("pwdChecked", "yes");
+      }
+      window.location.replace("index.html");
+    };
+  </script>
+</body>
+
+</html>

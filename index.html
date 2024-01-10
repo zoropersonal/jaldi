@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Easy Access</title>
+  <link rel="stylesheet" href="common.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script defer>
+    if (sessionStorage.getItem("pwdCorrect") == null) {
+      console.log(sessionStorage.getItem("pwdCorrect"));
+      window.location.replace("pwd.html");
+    }
+  </script>
+</head>
+
+<body onload="fillIt();">
+  <div class="navbar flex items-center justify-evenly px-2.5 py-3.5" style="background: var(--main-black); color: var(--main-white);">
+    <div class="item border-b-2 uppercase" style="border-color: var(--main-white);"><a href="#">Details</a></div>
+    <div class="item uppercase"><a href="bdays.html">Bdays</a></div>
+  </div>
+
+  <div class="w-full sm:w-3/5 p-2.5 my-5 mx-1.5 mx-auto index-container"></div>
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -74,3 +74,13 @@ const fillBdays = () => {
   }
 
 }
+
+let hamburgerMenu = document.getElementsByClassName("hamburger")[0];
+let theBar = Array.from(document.getElementsByClassName("bar"));
+
+hamburgerMenu.addEventListener("click", () => {
+  theBar.forEach(ele => {
+    ele.classList.toggle("active");
+  })
+  document.getElementsByClassName("second-nav")[0].classList.toggle("show");
+})

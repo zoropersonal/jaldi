@@ -55,3 +55,48 @@ input[type="button"] {
 span {
   color: var(--indigo);
 }
+
+.hamburger {
+  display: none;
+  /* transition: all 0.6s ease; */
+}
+
+.bar {
+  transition: all 0.6s ease;
+}
+
+.bar:nth-child(1).active  {
+  transform: rotate(-45deg) translateY(5px);
+}
+
+.bar:nth-child(2).active {
+  opacity: 0;
+  display: none;
+}
+
+.bar:nth-child(3).active {
+  transform: rotate(45deg) translateY(-5px);
+}
+
+.second-nav {
+  background-color: var(--main-black);
+  color: var(--main-white);
+  transform: translateX(-5000px);
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.show {
+  transform: translateX(0px);
+  visibility: visible;
+}
+
+@media (max-width: 450px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}

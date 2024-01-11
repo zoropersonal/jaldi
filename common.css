@@ -86,9 +86,24 @@ span {
   transition: all 0.4s ease-in-out;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
 .show {
   transform: translateX(0px);
   visibility: visible;
+}
+
+.second-nav {
+  top: 50px;
+  left: 0px;
+}
+
+.nav-links,
+.second-nav {
+  letter-spacing: 2px;
 }
 
 @media (max-width: 450px) {
